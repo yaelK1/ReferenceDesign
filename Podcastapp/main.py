@@ -18,10 +18,10 @@ def file_list():
     files = [] 
     AudioFiles = [] 
     i = 1
-    for (dirpath, dirnames, filenames) in os.walk('./files/Piclke'):
+    for (dirpath, dirnames, filenames) in os.walk('./Podcastapp/files/Piclke'):
         files.extend(filenames)
         break
-    for (dirpath, dirnames, filenames) in os.walk('./files/Audio'):
+    for (dirpath, dirnames, filenames) in os.walk('./Podcastapp/files/Audio'):
         AudioFiles.extend(filenames)
         break
     for f in AudioFiles:
@@ -72,7 +72,7 @@ def getMP3File(url):
     try:
         yt = YouTube(url)
         audio = yt.streams.get_audio_only()
-        out_file = audio.download(output_path='./files/Audio')
+        out_file = audio.download(output_path='./Podcastapp/files/Audio')
         base, ext = os.path.splitext(out_file)
         new_file = base + url[len(url)-11:]+'.mp3'
         new_file = new_file.replace(" ","_")
@@ -84,7 +84,7 @@ def getMP3File(url):
 def create_pickle(url):
     path = getMP3File(url)
     res = oneai_res(path)
-    pickle_name = './files/Piclke'+ path.split("./files/Audio",1)[1][:-4]+".pickle"
+    pickle_name = './files/Piclke'+ path.split("./Podcastapp/files/Audio",1)[1][:-4]+".pickle"
     with open(pickle_name, 'wb') as f:
         pickle.dump(res.transcription, f)
     file_list()
