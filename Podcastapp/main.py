@@ -11,6 +11,7 @@ import streamlit.components.v1 as components
 from pytube import YouTube
 from design import *
 import regex as re
+from PIL import Image
 
 def file_list():
     files = [] 
