@@ -1,7 +1,4 @@
-pickle
-webbrowser
-streamlit_option_menu
-extra_streamlit_components
-pytube
-regex
-oneai
+oneai==0.0.1
+pytube==10.8.5
+regex==2021.4.4
+streamlit-option-menu==0.1.0
