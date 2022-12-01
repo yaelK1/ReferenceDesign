@@ -162,7 +162,7 @@ def start_loader():
 """
     image = Image.open('Podcastapp/logo.png')
     col1,col2 = st.columns([6,1])
-    col2.image(image, caption=None, width=140, use_column_width=False, clamp=False, channels="RGB", output_format="auto")
+    col2.image(image, caption=None, width=False, use_column_width=False, clamp=False, channels="RGB", output_format="auto")
     col1.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">One AI Design Reference - Language AI for Podcasts</h1>', unsafe_allow_html=True) 
     st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{intro_str}</p>', unsafe_allow_html=True) 
     st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{instruction_str}</p>', unsafe_allow_html=True) 
