@@ -154,11 +154,11 @@ def side_bar_and_tabs(option):
 
 def start_loader():
     intro_str = """As an example, we used podcast episodes from YouTube and ran them through our text analytics pipeline """
-    instruction_str = """ Select an episode from the dropdown menu to see the results
-Press the Transcription tab to see the transcription.
-Press the sentiment tab to see the sentiments extracted from the video.
-Press the button next to the sentiment to see the corresponding part of the video. 
-Press the chapters tab to see the chapters extracted from the video. 
+    instruction_str = """ Select an episode from the dropdown menu to see the results. \n\n
+Press the Transcription tab to see the transcription.\n\n
+Press the sentiment tab to see the sentiments extracted from the video.\n
+Press the button next to the sentiment to see the corresponding part of the video. \n\n
+Press the chapters tab to see the chapters extracted from the video. \n
 Press the button next to the chapter to see the corresponding part of the video.
 """
     st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{intro_str}</p>', unsafe_allow_html=True) 
