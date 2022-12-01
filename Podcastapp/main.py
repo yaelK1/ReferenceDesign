@@ -161,9 +161,11 @@ Press the button next to the sentiment to see the corresponding part of the vide
 Press the chapters tab to see the chapters extracted from the video. \n
 Press the button next to the chapter to see the corresponding part of the video.
 """
+    st.markdown(f'<a href="https://github.com/yaelK1/ReferenceDesign/tree/main/Podcastapp">See full code</a>.', unsafe_allow_html=True) 
     st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{intro_str}</p>', unsafe_allow_html=True) 
     st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{instruction_str}</p>', unsafe_allow_html=True) 
     option = st.selectbox("",files_display())
+    
     if not option is None:
         side_bar_and_tabs(option) 
     
