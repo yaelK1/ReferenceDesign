@@ -153,18 +153,18 @@ def side_bar_and_tabs(option):
         placeholder_summary.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{summary_str}</h1>', unsafe_allow_html=True)
 
 def start_loader():
-    intro_str = """As an example, we used podcast episodes from YouTube and ran them through our text analytics pipeline """
-    instruction_str = """ Select an episode from the dropdown menu to see the results. \n\n
-Press the Transcription tab to see the transcription.\n\n
-Press the sentiment tab to see the sentiments extracted from the video.\n
-Press the button next to the sentiment to see the corresponding part of the video. \n\n
-Press the chapters tab to see the chapters extracted from the video. \n
-Press the button next to the chapter to see the corresponding part of the video.
+    intro_str = """\n As an example, we used podcast episodes from YouTube and ran them through our text analytics pipeline """
+    instruction_str = """ /n 1. Select an episode from the dropdown menu to see the results. \n\n
+2. Press the Transcription tab to see the transcription.\n\n
+3. Press the sentiment tab to see the sentiments extracted from the video.\n
+4. Press the button next to the sentiment to see the corresponding part of the video. \n\n
+5. Press the chapters tab to see the chapters extracted from the video. \n
+6. Press the button next to the chapter to see the corresponding part of the video.
 """
     
     st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{intro_str}</p>', unsafe_allow_html=True) 
     st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{instruction_str}</p>', unsafe_allow_html=True) 
-    st.markdown(f'<a href="https://github.com/yaelK1/ReferenceDesign/tree/main/Podcastapp">See full code</a>', unsafe_allow_html=True) 
+    st.markdown(f'<a href="https://github.com/yaelK1/ReferenceDesign/tree/main/Podcastapp">See code</a>', unsafe_allow_html=True) 
     option = st.selectbox("",files_display())
     
     if not option is None:
