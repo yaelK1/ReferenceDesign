@@ -1,7 +1,7 @@
-oneai
 pickle
 webbrowser
 streamlit_option_menu
 extra_streamlit_components
 pytube
 regex
+oneai
