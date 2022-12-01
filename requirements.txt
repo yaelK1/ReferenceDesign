@@ -1,2 +1,4 @@
 oneai==0.6.5
 pytube3==9.6.4
+streamlit_option_menu==0.3.2
+
