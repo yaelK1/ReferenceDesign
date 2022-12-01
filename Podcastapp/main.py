@@ -161,7 +161,7 @@ def start_loader():
 3. You can also click the buttons next to the sentiment/chapter on the left to get directly to the relevant part of the video
 """
     image = Image.open('Podcastapp/logo.png')
-    col1,col2 = st.columns([4,1])
+    col1,col2 = st.columns([3,1])
     col2.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     col1.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">One AI Design Reference - Language AI for Podcasts</h1>', unsafe_allow_html=True) 
     st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{intro_str}</p>', unsafe_allow_html=True) 
