@@ -153,8 +153,7 @@ def side_bar_and_tabs(option):
         placeholder_summary.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{summary_str}</h1>', unsafe_allow_html=True)
 
 def start_loader():
-    intro_str = """ \n\n 
-    As an example, we used podcast episodes from YouTube and ran them through our text analytics pipeline """
+    intro_str = """ \n\n In this example, we used podcast episodes from YouTube and ran them through our text analytics pipeline """
     instruction_str = """ \n\n
 1. Select an episode from the dropdown menu to see the results. \n\n
 2. Press the Transcription tab to see the transcription.\n\n
