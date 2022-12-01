@@ -38,16 +38,19 @@ def files_display():
     return clean_files
 
 def get_pickle(option):
-    i = int(option.split(". ",1)[0])
-    ref = file_list()[i-1][-18:-7]
-    name = './files/Piclke/' + file_list()[i-1].replace(" ","_")
-    pick = open(name,'rb')
-    try:
-        x = pickle.load(pick)
-    except EOFError:
+    if option is not null:
+        i = int(option.split(". ",1)[0])
+        ref = file_list()[i-1][-18:-7]
+        name = './files/Piclke/' + file_list()[i-1].replace(" ","_")
+        pick = open(name,'rb')
+        try:
+            x = pickle.load(pick)
+        except EOFError:
+            pass
+        return [x,ref]
+    else:
         pass
-    return [x,ref]
-
+    
 def linkable_labels(data:oneai.Output,ref):
     label_str_lst = []
     start_time_list = []
