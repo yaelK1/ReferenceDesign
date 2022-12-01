@@ -154,7 +154,7 @@ def side_bar_and_tabs(option):
 
 def start_loader():
     intro_str = """\n As an example, we used podcast episodes from YouTube and ran them through our text analytics pipeline """
-    instruction_str = """ /n 1. Select an episode from the dropdown menu to see the results. \n\n
+    instruction_str = """ \n 1. Select an episode from the dropdown menu to see the results. \n\n
 2. Press the Transcription tab to see the transcription.\n\n
 3. Press the sentiment tab to see the sentiments extracted from the video.\n
 4. Press the button next to the sentiment to see the corresponding part of the video. \n\n
