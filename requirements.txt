@@ -1,4 +1,3 @@
-pickle
 webbrowser
 streamlit_option_menu
 extra_streamlit_components
