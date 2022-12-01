@@ -38,18 +38,15 @@ def files_display():
     return clean_files
 
 def get_pickle(option):
-    if not option is None:
-        i = int(option.split(". ",1)[0])
-        ref = file_list()[i-1][-18:-7]
-        name = './files/Piclke/' + file_list()[i-1].replace(" ","_")
-        pick = open(name,'rb')
-        try:
-            x = pickle.load(pick)
-        except EOFError:
-            pass
-        return [x,ref]
-    else:
+    i = int(option.split(". ",1)[0])
+    ref = file_list()[i-1][-18:-7]
+    name = './files/Piclke/' + file_list()[i-1].replace(" ","_")
+    pick = open(name,'rb')
+    try:
+        x = pickle.load(pick)
+    except EOFError:
         pass
+    return [x,ref]
     
 def linkable_labels(data:oneai.Output,ref):
     label_str_lst = []
@@ -160,7 +157,8 @@ def side_bar_and_tabs(option):
 def start_loader():
     intro_str = "\n\n Press the Transcription tab to see the transcription  \n\n Press the sentiment tab to see the sentiments extracted from the video.\n Press the button next to the sentiment to see the corresponding part of the video. \n\n Press the chapters tab to see the chapters extracted from the video. \n Press the button next to the chapter to see the corresponding part of the video."
     st.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">Choose a file from the dropdown menu to get started.</h1>', unsafe_allow_html=True)
-    st.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{intro_str}</h1>', unsafe_allow_html=True)
+    st.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{intro_str}</h1>', unsafe_allow_html=True) 
     option = st.selectbox("",files_display())
-    side_bar_and_tabs(option)
+    side_bar_and_tabs(option) if not option is None 
+    
 
