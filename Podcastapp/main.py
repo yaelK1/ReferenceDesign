@@ -84,7 +84,7 @@ def getMP3File(url):
 def create_pickle(url):
     path = getMP3File(url)
     res = oneai_res(path)
-    pickle_name = './files/Piclke'+ path.split("./Podcastapp/files/Audio",1)[1][:-4]+".pickle"
+    pickle_name = './Podcastapp/files/Piclke'+ path.split("./Podcastapp/files/Audio",1)[1][:-4]+".pickle"
     with open(pickle_name, 'wb') as f:
         pickle.dump(res.transcription, f)
     file_list()
