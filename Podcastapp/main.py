@@ -153,13 +153,15 @@ def side_bar_and_tabs(option):
         placeholder_summary.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{summary_str}</h1>', unsafe_allow_html=True)
 
 def start_loader():
-    intro_str = """\n As an example, we used podcast episodes from YouTube and ran them through our text analytics pipeline """
-    instruction_str = """ \n 1. Select an episode from the dropdown menu to see the results. \n\n
+    intro_str = """ \n\n 
+    As an example, we used podcast episodes from YouTube and ran them through our text analytics pipeline """
+    instruction_str = """ \n\n
+1. Select an episode from the dropdown menu to see the results. \n\n
 2. Press the Transcription tab to see the transcription.\n\n
 3. Press the sentiment tab to see the sentiments extracted from the video.\n
-4. Press the button next to the sentiment to see the corresponding part of the video. \n\n
+4. Press the button next to the sentiment to get directly to that part of the video. \n\n
 5. Press the chapters tab to see the chapters extracted from the video. \n
-6. Press the button next to the chapter to see the corresponding part of the video.
+6. Press the button next to the chapter to get directly to that part of the video.
 """
     
     st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{intro_str}</p>', unsafe_allow_html=True) 
