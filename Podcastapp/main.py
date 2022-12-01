@@ -136,10 +136,6 @@ def side_bar_and_tabs(option):
                 placeholser_topic.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{topic_str}</h1>', unsafe_allow_html=True)
                 placeholder_vid.video(url,start_time=start_time)
                 placeholder_summary.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{summary_str}</h1>', unsafe_allow_html=True)
-            else:
-                placeholser_topic.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{topic_str}</h1>', unsafe_allow_html=True)
-                placeholder_vid.video(url)
-                placeholder_summary.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{summary_str}</h1>', unsafe_allow_html=True)
     elif tab_id == "Chapters":
         placeholder_side.markdown(f'<h1 style="font-size: 24px; color: #1C1D29; font-weight: bold;">{tab_id}</h1>', unsafe_allow_html=True)
         chapters_data = linkable_chapters(oneai_res.proofread.segments)
