@@ -25,7 +25,7 @@ def file_list():
         AudioFiles.extend(filenames)
         break
     for f in AudioFiles:
-        os.remove("./files/Audio/"+f)
+        os.remove("./Podcastapp/files/Audio/"+f)
     
     return files
 
