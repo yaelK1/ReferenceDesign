@@ -159,6 +159,7 @@ def start_loader():
     st.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">Choose a file from the dropdown menu to get started.</h1>', unsafe_allow_html=True)
     st.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{intro_str}</h1>', unsafe_allow_html=True) 
     option = st.selectbox("",files_display())
-    side_bar_and_tabs(option) if not option is None 
+    if not option is None:
+        side_bar_and_tabs(option) 
     
 
