@@ -162,7 +162,7 @@ def start_loader():
 5. Press the chapters tab to see the chapters extracted from the video. \n
 6. Press the button next to the chapter to get directly to that part of the video.
 """
-    
+    st.markdown(f'<h1> style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">One AI Design Reference - Language AI for Podcasts</h1>', unsafe_allow_html=True) 
     st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{intro_str}</p>', unsafe_allow_html=True) 
     st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{instruction_str}</p>', unsafe_allow_html=True) 
     st.markdown(f'<a href="https://github.com/yaelK1/ReferenceDesign/tree/main/Podcastapp">See code</a>', unsafe_allow_html=True) 
