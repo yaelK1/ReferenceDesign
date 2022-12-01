@@ -40,7 +40,7 @@ def files_display():
 def get_pickle(option):
     i = int(option.split(". ",1)[0])
     ref = file_list()[i-1][-18:-7]
-    name = './files/Piclke/' + file_list()[i-1].replace(" ","_")
+    name = './Podcastapp/files/Piclke/' + file_list()[i-1].replace(" ","_")
     pick = open(name,'rb')
     try:
         x = pickle.load(pick)
