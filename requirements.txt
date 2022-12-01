@@ -1,6 +1,2 @@
-webbrowser
-streamlit_option_menu
-extra_streamlit_components
-oneai
-pytube
-regex 
+oneai==0.6.5
+
