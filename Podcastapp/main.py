@@ -136,7 +136,7 @@ def side_bar_and_tabs(option):
                 placeholser_topic.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{topic_str}</h1>', unsafe_allow_html=True)
                 placeholder_vid.video(url,start_time=start_time)
                 placeholder_summary.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{summary_str}</h1>', unsafe_allow_html=True)
-             else:
+            else:
                 placeholser_topic.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{topic_str}</h1>', unsafe_allow_html=True)
                 placeholder_vid.video(url)
                 placeholder_summary.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{summary_str}</h1>', unsafe_allow_html=True)
