@@ -109,9 +109,9 @@ def side_bar_and_tabs(option):
     ref = x[1]
     url = "https://www.youtube.com/watch?v="+ref
     tab_id = stx.tab_bar(data=[
-    stx.TabBarItemData(id="Transcription", title="Transcription", description="Get Transcription",),
-    stx.TabBarItemData(id="Sentiments", title="Sentiments", description=False),
-    stx.TabBarItemData(id="Chapters", title="Chapters", description=False)])
+    stx.TabBarItemData(id="Transcription", title="Transcription", description="Transcribe"),
+    stx.TabBarItemData(id="Sentiments", title="Sentiments", description="Extract Sentiment"),
+    stx.TabBarItemData(id="Chapters", title="Chapters", description="Split to Chapters")])
     topic_str = "Topics: " + ''.join(["#"+ x.value for x in oneai_res.proofread.topics])
     summary_str = "Summary: " + oneai_res.proofread.summary.text
     placeholder_side = st.sidebar.container()
