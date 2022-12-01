@@ -124,7 +124,7 @@ def side_bar_and_tabs(option):
         placeholder_side.markdown(f'<p style="font-size: 18px; color: #1C1D29; font-weight: normal;">{transcription_str}</p>', unsafe_allow_html=True)
         placeholser_topic.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{topic_str}</h1>', unsafe_allow_html=True)
         placeholder_vid.video(url)
-        placeholder_summary.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{summary_str}</h1>', unsafe_allow_html=True)
+        placeholder_summary.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{summary_str}</h1>', unsafe_allow_html=True)
     elif tab_id == "Sentiments": 
         placeholder_side.markdown(f'<h1 style="font-size: 24px; color: #1C1D29; font-weight: bold;">{tab_id}</h1>', unsafe_allow_html=True)
         labels_data = linkable_labels(oneai_res.proofread.sentiments,ref)
@@ -135,7 +135,7 @@ def side_bar_and_tabs(option):
                 start_time = labels_data[1][i]
                 placeholser_topic.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{topic_str}</h1>', unsafe_allow_html=True)
                 placeholder_vid.video(url,start_time=start_time)
-                placeholder_summary.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{summary_str}</h1>', unsafe_allow_html=True)
+                placeholder_summary.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{summary_str}</h1>', unsafe_allow_html=True)
     elif tab_id == "Chapters":
         placeholder_side.markdown(f'<h1 style="font-size: 24px; color: #1C1D29; font-weight: bold;">{tab_id}</h1>', unsafe_allow_html=True)
         chapters_data = linkable_chapters(oneai_res.proofread.segments)
@@ -150,7 +150,7 @@ def side_bar_and_tabs(option):
     else:
         placeholser_topic.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{topic_str}</h1>', unsafe_allow_html=True)
         placeholder_vid.video(url)
-        placeholder_summary.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{summary_str}</h1>', unsafe_allow_html=True)
+        placeholder_summary.markdown(f'<h1 style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{summary_str}</h1>', unsafe_allow_html=True)
 
 def start_loader():
     intro_str = """As an example, we used podcast episodes from YouTube and ran them through our text analytics pipeline """
@@ -161,8 +161,8 @@ Press the button next to the sentiment to see the corresponding part of the vide
 Press the chapters tab to see the chapters extracted from the video. 
 Press the button next to the chapter to see the corresponding part of the video.
 """
-    st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{intro_str}</p>', unsafe_allow_html=True) 
-    st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: bold;">{instruction_str}</p>', unsafe_allow_html=True) 
+    st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{intro_str}</p>', unsafe_allow_html=True) 
+    st.markdown(f'<p style="font-size: 24px; color: #FFFFFF; font-weight: normal ;">{instruction_str}</p>', unsafe_allow_html=True) 
     option = st.selectbox("",files_display())
     if not option is None:
         side_bar_and_tabs(option) 
