@@ -38,7 +38,7 @@ def files_display():
     return clean_files
 
 def get_pickle(option):
-    if not option is None::
+    if not option is None:
         i = int(option.split(". ",1)[0])
         ref = file_list()[i-1][-18:-7]
         name = './files/Piclke/' + file_list()[i-1].replace(" ","_")
