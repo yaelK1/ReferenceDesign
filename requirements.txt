@@ -3,3 +3,4 @@ pytube3==9.6.4
 streamlit_option_menu==0.3.2
 extra-streamlit-components==0.1.56 
 regex==2022.10.31
+Pillow==9.0.1
