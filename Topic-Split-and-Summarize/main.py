@@ -1,6 +1,8 @@
 import streamlit as st
 import pickle
 import oneai
+from oneai import Skill, skillclass, dataclass
+import typing
 from pytube import YouTube
 import os
 import sys
@@ -12,6 +14,35 @@ from design import *
 global files
 
 oneai.api_key = "bd883760-daa9-4bfe-8702-bd4fc90cdea0"
+
+
+@skillclass(
+    api_name="dialogue-segmentation",
+    label_type="dialogue-segment",
+    output_attr="segments",
+)
+@dataclass
+class SplitByTopic(Skill):
+    """
+    Splits input by discussed topics
+
+    ## Output Attributes
+
+    `segments: list[Label]`
+        A list of `Label` objects, with generated topic-segments
+
+    ## Example
+
+    >>> pipeline = oneai.Pipeline(steps=[
+    ...     oneai.skills.SplitByTopic()
+    ... ])
+    >>> output = pipeline.run('...')
+    >>> output.segments
+    """
+
+    std_ratio: float = 0
+    use_discourse_parser: bool = False
+    amount: typing.Literal["more", "less", "normal"] = None
 
 
 def chapters_to_summaries(chapters):
